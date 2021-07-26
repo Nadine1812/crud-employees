@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prenom</th>
+                        <th scope="col">Date de naissance</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let m of employees; index as i">
+                    <tr>
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{m.firstName}}</td>
+                        <td>{{m.lastName}}</td>
+                        <td>{{m.dateNaissance}}</td>
+                        <td><button class="btn btn-secondary" (click)="goToDisplay(m.id)">Display</button></td>
+                        <td><button class="btn btn-success" (click)="goToEdit(m.id)">Update</button></td>
+                        <td><button class="btn btn-danger" (click)="deleteEmployee(m.id)">Delete</button></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary btn-lg btn-block" (click)="addEmployee()">Add</button>
+    </div>
+</div>

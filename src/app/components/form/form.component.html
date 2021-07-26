@@ -1,0 +1,28 @@
+<div class="site-section">
+    <div class="container">
+      <div>
+        <h2>{{title}} employee :</h2>
+    </div>
+      <div class="row">
+        <div class="col-lg-7">
+          <form #addEmployeeForm='ngForm' (ngSubmit)='Employee()'>
+            <div class="form-group">
+              <input type="text" class="form-control" [(ngModel)]='employee.firstName'
+                [ngModelOptions]="{standalone: true}" placeholder="First Name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" [(ngModel)]='employee.lastName'
+                [ngModelOptions]="{standalone: true}" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" [(ngModel)]='employee.dateNaissance'
+                [ngModelOptions]="{standalone: true}" placeholder="Date de naissance">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary py-3 px-5">{{title}}</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
